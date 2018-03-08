@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="532514702665319">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="404891482569492" type="System" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="234838804776221" type="Sprite">
+                    <param id="0" name="X">Mouse.X</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="580230723063823">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="295251742206239" type="Sprite2">
+                    <param id="0" name="Object">Sprite5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="1" name="Start fade" sid="234358272971764" type="Sprite5" />
+                <action behavior="Solid" id="0" name="Set enabled" sid="631583535170961" type="Sprite5">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="893725624740999" type="Sprite5">
+                    <param id="0" name="Object">Sprite7</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="424643385574963">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="994782985093529" type="Sprite2">
+                    <param id="0" name="Object">Sprite</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="777099353453840" type="Sprite2">
+                    <param id="0" name="Angle">270+75*(Sprite2.X)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="932930084520248">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="343288202371749" type="Sprite2" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="605247362012505" type="Sprite">
+                    <param id="0" name="Object">Sprite9</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
